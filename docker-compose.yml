@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres_container
+    environment:
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: pa55word
+      POSTGRES_DB: todos
+    ports:
+      - "5432:5432"
+    volumes:
+      - todos_db:/var/lib/postgresql/data
+
+volumes:
+  todos_db:
