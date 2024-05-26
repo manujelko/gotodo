@@ -47,7 +47,7 @@ db/migrations/force:
 ## run/api: run the api
 .PHONY: run/api
 run/api:
-	go run ./cmd/api
+	@TODOS_DB_DSN=${TODOS_DB_DSN} go run ./cmd/api
 
 ## audit: tidy, verify, format, vet and test code
 .PHONY: audit
